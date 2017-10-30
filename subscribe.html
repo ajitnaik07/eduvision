@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width">
+        <meta name="description" content="Eduvision aims at bridging the communication gap between students and teachers and using internet to make education fun">
+        <meta name="keywords" content="E-Learning,Education,Student,Teacher,Book of the week,Communication,Eduvision">
+<title>
+	Learning Is Now Fun
+</title>
+<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+<link rel="stylesheet" href="mysheet.css">
+</head>
+<body id="Home">
+<div id="big_wrapper">
+<header id="header" role="banner">
+<h1 id="logop" align="center"> GRE Gyaan </h1><br><br>
+<p id="tag_line"><q>Do something today that your future self will thank you for.</q></p>
+</header>
+<div class="menu-wrap">
+    <nav class="menu">
+        <ul class="clearfix">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Quiz of the day<span class="arrow">&#9660;</span></a>
+ 
+                <ul class="sub-menu">
+                    <li><a href="quant_quiz.htm">Quants</a></li>
+                    <li><a href="verb_quiz.html">Verbal</a></li>
+                </ul>
+            </li>
+            <li>
+				<a href="#">Videos<span class="arrow">&#9660;</span></a>
+			
+				<ul class="sub-menu">
+					<li><a href="intro.html">Introduction</a></li>
+                    <li><a href="quant.html">Quants</a></li>
+                    <li><a href="verbal.html">Verbal</a></li>
+					<li><a href="awa.html">AWA</a></li>
+                </ul>
+			</li>
+			<li class="current-item">
+				<a href="">My account<span class="arrow">&#9660;</span></a>
+				<ul class="sub-menu">
+					<li><a href="myaccount.php">Login</a></li>
+                    <li class="current-item"><a href="subscribe.html">Subscribe</a></li>
+                </ul>
+			
+			</li>
+            <li><a href="AboutUs.html">About us</a></li>
+        </ul>
+    </nav>
+</div>
+<br><br>
+<div id="subscribeform" align="center">
+<form name="Subscribe" action="subscribe.php" method="post">
+<br><br><br>
+<h2>Subscribe here for just INR 500 for 6 months!</h2><br>
+First Name: <input type="text" name="fname" placeholder="Enter your first name" autofocus required><br><br>
+Last Name: <input type="text" name="lname" placeholder="Enter your last name" required><br><br>
+Email: <input type="email" name="email" required><br><br>
+Username: <input type="text" name="username" placeholder="Select a username" required><br><br>
+Password: <input type="password" name="password" id="pass" required><br><br>
+Confirm Password: <input type="password" name="conpassword" id="conpass" required><br><br>
+Credit card number: <input type="text" name="cardno" required><br><br>
+CCV: <input type="password" name="ccv" required><br><br>
+Amount: <input type="text" value="500" name="amt" disabled><br><br>
+<input type="Submit" value="Subscribe" id="upload" name="subscribe">
+<input type="Reset" value="Reset" id="upload">
+<br><br>
+</form>
+<script>
+document.getElementById('pass').willValidate;
+document.getElementById('conpass').willValidate;
+var pass = document.getElementById('pass');
+var conpass = document.getElementById('conpass');
+var checkPasswordValidity = function() {
+    if (pass.value != conpass.value) {
+        conpass.setCustomValidity('Passwords do not match!');
+    } else {
+        conpass.setCustomValidity('');
+    }        
+};
+pass.addEventListener('change', checkPasswordValidity, false);
+conpass.addEventListener('change', checkPasswordValidity, false);
+</script>
+</div>
+</div>
+<body>
+</html>
